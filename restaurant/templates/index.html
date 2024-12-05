@@ -1,0 +1,986 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Byte Bistro</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/iconn.png' %}" rel="icon">
+  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+ </head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="bytebistro@gmail.com">bytebistro@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 796 830 208</span></i>
+        </div>
+        <div class="languages d-none d-md-flex align-items-center">
+
+          <div class="social">
+            <a href="https://www.whatsapp.com/254796830208"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://x.com/a_amaduo"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/amaduo.adul.10/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=W57_92pspko&pp=ygUbYmVzdCByZXN0YXVyYW50cyBpbiBuYWlyb2Jp"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/amaduo-adul-1b8794241/?lipi=urn%3Ali%3Apage%3Aprofile_common_profile_index%3B507b8cce-255e-45a8-afe3-0e54b222f9aa"><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+          </div>       
+
+
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="#home" class="logo d-flex align-items-center me-auto me-xl-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Byte Bistro</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#home" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+         <a class="btn-book-a-table d-none d-xl-block" href="#book-a-table">Book a Table</a>
+      
+
+      </div>
+
+        {% if messages %}
+
+        {% for message in messages %}
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          {{message}}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+        </div>
+
+        {% endfor %}
+
+        {% endif %}
+        
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="home" class="hero section dark-background">
+
+      <img src="{% static 'assets/img/about-bg.jpg' %}" alt="" data-aos="fade-in">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 d-flex flex-column align-items-center align-items-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100">Welcome to <span>Byte Bistro</span></h2>
+            <p data-aos="fade-up" data-aos-delay="200">Delivering great food for more than 5 years!</p>
+            <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+              <a href="#menu" class="cta-btn">Our Menu</a>
+              <a href="#book-a-table" class="cta-btn">Book a Table</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex align-items-center justify-content-center mt-5 mt-lg-0">
+            <a href="https://https://www.youtube.com/watch?v=27xzUe4tUDo&pp=ygUbYmVzdCByZXN0YXVyYW50cyBpbiBuYWlyb2Jp" class="glightbox pulsating-play-btn"></a>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+      <br><br><br>
+    <!-- About Section -->
+       <section id="about" class="about section">
+    <div class="container" align="center">
+    <b><h1>ABOUT US</h1></b>
+    <b><h2>WELCOME</h2></b>
+    <p>Welcome to Byte Bistro, your online destination for fast food delights. <br> Indulge in our loyalty programs, experience exceptional customer service,
+        <br> and enjoy the convenience of flexible working hours.
+        <br> Savor the flavors at Byte Bistro, where we redefine fast food dining for your satisfaction.</p>
+    <br>
+     <h1>MISSION</h1>
+            <p>To create an unforgettable dining experience by serving exceptional & <br> delicious food crafted from quality ingredients, delivered with warmth, consistency, and care. <br> We strive to be a place where people come together to relax, connect, and <br> share memorable moments over the best food and cuisine.</p><br>
+            <h1>VISION</h1>
+            <p>To be the leading restaurant brand in the region, <br>renowned for our dedication to quality, customer satisfaction, <br>and community impact. We aim to grow sustainably and expand our reach, <br>while always staying true to our values of excellence, integrity, <br>and innovation in every cup and dish we serve.</p><br>
+            <h1>OUR TEAM</h1>
+            <p>Our team is passionate about providing exceptional service and <br> a user-friendly online shopping experience. With just a few <br> clicks, you can browse our menu, place an order, and have your favorite <br> meals delivered right to your door. We’re here to make dining a <br>little easier and a lot more delicious.</p>
+        <br>
+        <hr>
+                  </div>
+        <br><br>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-6" align="center">
+                    <b><h1>Address</h1></b><br>
+                    <p>We’re excited to meet you! Feel free to get in touch with us within these working hours.</p>
+                   <b> <p>Email</p></b>
+                    <p>bytbistro@gmail.com</p>
+                  <b>  <p>Phone</p></b>
+                    <p>+254796830208</p>
+                    <b><p>Address</p></b>
+                    <p>Oginga Odinga Streets, 2087</p>
+                </div>
+                 <div class="col-md-6" align="center">
+                    <b> <h1>Working hours</h1></b><br>
+                     <p>Monday: 09 : 00am - 07 : 30pm</p>
+                     <p>Tuesday: 09 : 00am - 07 : 30pm</p>
+                     <p>Wednesday: 09 : 00am - 07 : 30pm</p>
+                     <p>Thursday: 09 : 00am - 07 : 30pm</p>
+                     <p>Friday: 09 : 00am - 07 : 30pm</p>
+                     <p>Saturday: 09 : 00am - 07 : 30pm</p>
+                     <p>Sunday: 09 : 00am - 07 : 30pm</p>
+                 </div>
+                <br><br>
+                <hr>
+                <br><br>
+            </div>
+        </div>
+         <div class="container" align="center">
+            <b><h1>OUR RESULTS</h1></b> <br>
+            <div class="row">
+                <div class="col-md-3">
+                   <h1> <b>5</b></h1>
+                    <p>years of experience</p>
+                </div>
+                <div class="col-md-3">
+                    <h1><b>100%</b></h1>
+                    <p>happy clients</p>
+                </div>
+                <div class="col-md-3">
+                   <h1><b>50+</b></h1>
+                    <p>events hosted</p>
+                </div>
+                <div class="col-md-3">
+                   <h1><b>230</b></h1>
+                    <p>projects completed</p>
+                </div>
+            </div>
+             <br>
+             <hr>
+        </div>
+        <br><br>
+         <div class="container">
+                <div class="row">
+                <h1>SERVICES</h1><br>
+                <div class="col-md-4">
+                    <h2>Take-away</h2>
+                    <p>All our available services at the moment for you!</p>
+                    <img src="{% static 'assets/img/takeaway.jpeg' %}" alt="" width="300" height="220">
+                </div>
+
+                <div class="col-md-4">
+                     <h2>Drive-through</h2>
+                    <p>All our available services at the moment for you!</p>
+                    <img src="{% static 'assets/img/drive.jpeg' %}" alt="" width="300" height="220">
+                </div>
+                <div class="col-md-4">
+                    <h2>Online Ordering</h2>
+                    <p>All our available services at the moment for you!</p>
+                    <img src="{% static 'assets/img/online.jpeg' %}" alt="" width="300" height="220">
+                </div>
+                     </div>
+                </div>
+                <br><br>
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <h2>Dine-in</h2>
+                      <p>All our available services at the moment for you!</p>
+                      <img src="{% static 'assets/img/dine.jpeg' %}" alt="" width="300" height="220">
+
+                    </div>
+                    <div class="col-md-6">
+                      <h2>Delivery</h2>
+                      <p>All our available services at the moment for you!</p>
+                      <img src="{% static 'assets/img/delivery.jpeg' %}" alt="" width="300" height="220">
+                    </div>
+                  </div>
+                </div>
+           <br><br><br>
+
+                   <div class="container" align="center">
+            <h2>Satisfy your Cravings with Our Burgers</h2>
+            <p>At our fast food restaurant, we offer a wide selection of delicious burgers that are sure to satisfy anyone's cravings. Each burger is prepared fresh and made-to-order with your favorite toppings. Choose from classic options like lettuce, tomato, onions and pickles or indulge in something new like bacon jam or avocado slices. No matter what you pick, you'll love the juicy flavor of our delicious burgers!</p>
+        </div>
+           <br><br>
+
+             <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="{% static 'assets/img/aa.jpg' %}" alt="" width="150"><br><br>
+                      <img src="{% static 'assets/img/ab.jpg' %}" alt="" width="150">
+                </div>
+                <div class="col-md-2">
+                     <img src="{% static 'assets/img/ab.jpg' %}" alt="" width="150"><br><br>
+                    <img src="{% static 'assets/img/ae.jpg' %}" alt="" width="150">
+                </div>
+                <div class="col-md-2">
+                     <img src="{% static 'assets/img/ac.jpg' %}" alt="" width="150"><br><br>
+                    <img src="{% static 'assets/img/af.jpg' %}" alt="" width="150">
+                </div>
+                <div class="col-md-2">
+                     <img src="{% static 'assets/img/ae.jpg' %}" alt="" width="150"><br><br>
+                     <img src="{% static 'assets/img/ac.jpg' %}" alt="" width="150">
+                </div>
+                <div class="col-md-2">
+                     <img src="{% static 'assets/img/af.jpg' %}" alt="" width="150"><br><br>
+                     <img src="{% static 'assets/img/ab.jpg' %}" alt="" width="150">
+                </div>
+                <div class="col-md-2">
+                     <img src="{% static 'assets/img/ag.jpg' %}" alt="" width="150"><br><br>
+                     <img src="{% static 'assets/img/aa.jpg' %}" alt="" width="150">
+                </div>
+            </div>
+        </div>
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+              <!-- Section Title -->
+    <div class="container ">
+         <b><h1>Frequently asked questions <i>(FAQ)</i></h1></b><br>
+        <div class="row">
+            <div class="col-md-4">
+                <b><h3>What are your store hours?</h3></b>
+                <p>Our store hours are from 9AM to 7:30PM daily.</p><br><br>
+                <b><h3>What types of payment do you accept?</h3></b>
+                <p>We accept cash, credit cards, and debit cards.</p>
+            </div>
+            <div class="col-md-4">
+                <b><h3>Do you offer delivery?</h3></b>
+                <p>Yes, we offer delivery through our online ordering platform.</p><br><br>
+                <b><h3>Do you have a loyalty program?</h3></b>
+                <p>Yes, we offer a loyalty program that rewards customers for repeat purchases.</p>
+            </div>
+            <div class="col-md-4">
+                <b><h3>Do you have vegetarian options?</h3></b>
+                <p>Yes, we have a variety of vegetarian options available.</p><br><br>
+                <b><h3>Are your products gluten-free?</h3></b>
+                <p>Yes, many of our products are gluten-free. Please check the ingredients list for each item.</p>
+            </div>
+        </div>
+    </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Menu</h2>
+       <b> <p>Check Our Tasty Menu</p></b>
+      </div><!-- End Section Title -->
+
+      <div class="container isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+          </div>
+        </div><!-- Menu Filters -->
+
+ <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'assets/img/11.png' %}" alt="" width="200"><br>
+                <a href="orders" class="add-to-cart">Squashed Eggs</a><span>$12.05</span>
+                <p>Sweet tasting squashed eggs rich in proteins and many more nutrients</p><br>
+                <img src="{% static 'assets/img/20.png' %}" alt="" width="200"><br>
+                <a href="orders">Lobster Roll</a><span>$31.65</span>
+                <p>A hearty combination of sea food ready to be eaten</p>
+            </div>
+            <div class="col-md-3">
+                <img src="{% static 'assets/img/12.png' %}" alt="" width="200"><br>
+                <a href="orders">Crunchy</a><span>22.50</span>
+                <p>A hearty combination of mixed grains such as farro, quinoa, and wild rice</p><br>
+                <img src="{% static 'assets/img/19.png' %}" alt="" width="200"><br>
+                <a href="orders">Budapest</a><span>$29.90</span>
+                <p>A hearty combination of mixed grains such as farro, quinoa, and wild rice</p>
+            </div>
+                        <div class="col-md-3">
+                <img src="{% static 'assets/img/13.png' %}" alt="" width="200"><br>
+                            <a href="orders">Pasta</a><span>$10.99</span>
+                <p>A hearty combination of mixed grains such as farro, quinoa, and wild rice</p><br>
+                <img src="{% static 'assets/img/18.png' %}" alt="" width="200"><br>
+                            <a href="orders">Pork</a><span>$26.84</span>
+                <p>Sweet tasting, fresh looking with a sweet aroma to quench your need</p>
+            </div>
+            <div class="col-md-3">
+                <img src="{% static 'assets/img/14.png' %}" alt="" width="200"><br>
+                <a href="orders">Pan fried Duck</a><span>$29.00</span>
+                <p>A hearty combination of green vegetables to help you grow stronger and stay healthier</p><br>
+                <img src="{% static 'assets/img/17.png' %}" alt="" width="200"><br>
+                <a href="orders">Vegetables</a><span>$15.32</span>
+                <p>A hearty combination of mixed grains such as farro, quinoa, and wild rice</p>
+            </div>
+        </div>
+    </div>
+
+
+    
+            </section><!-- /Menu Section -->
+
+    <!-- Specials Section -->
+    <section id="specials" class="specials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Specials</h2>
+        <b><p>Check Out Our Specials</p></b>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#specials-tab-1">Almas beluga</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-2">Posh Pie</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-3">Billion Dollar Popcorn</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-4">White Truffle</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#specials-tab-5">Beluga's Almas Caviar</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="specials-tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>About  Almas beluga</h3>
+                    <p>World's finest caviar Almas beluga, which is derived from a rare Iranian Beluga sturgeon, holds the Guinness World Record for the most expensive food in the world and costs Ksh 3,400,500 per kilogram. It is also the most expensive food in the world.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-1.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>About Posh Pie</h3>
+                    <p>Tender chunks of chicken with pork sausage meat and ham are encased in crisp hot water crust pastry, liberally seasoned with spices and herbs. It is priced at Ksh 50,000.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-2.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>About Billion Dollar Popcorn</h3>
+                    <p> It is made by Chicago-based popcorn company Berco's Popcorn. It is priced at Ksh 500,000.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-3.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-4">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>About White Truffle</h3>
+                    <p>White truffles are highly sought after and their market value can vary depending on factors like quality, availability, and demand. It is priced at Ksh 800,000.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-4.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="specials-tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>About Beluga's Almas Caviar</h3>
+                    <p>Almas Beluga caviar is a rare and expensive type of caviar that comes from the eggs of the Albino Beluga sturgeon. It is priced at Ksh 900,000.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="{% static 'assets/img/specials-5.png' %}" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Specials Section -->
+
+    <!-- Events Section -->
+    <section id="events" class="events section">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>EVENTS</h2>
+        <p>Enjoy your events with us</p>
+      </div>
+      <div class="container">
+
+        <div class="swiper init-swiper" data-aos="fade-up" data-aos-delay="100">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/events-slider-1.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Wedding Parties</h3>
+                  <div class="price">
+                    <p><span>$309</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Make your weeding amongst the best in the universe with our restaurant. The best place to be and enjoy with your happily wedded spouse. You will all enjoy it at our restaurant as we believe our staff does their best.
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Make them feel special with us.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>You will enjoy our cool breeze and our great services.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Allow us help you make your spouse feel special.</span></li>
+                  </ul>
+                  <p>
+                    <b>Feel welcomed</b>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/events-slider-2.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Private Parties</h3>
+                  <div class="price">
+                    <p><span>$290</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    We also offer private party celebrations to our customers. Feel most welcomed and celebrate with your peers. 
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Feel welcomed to hold your private parties with us.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>Trust us when we say we offer the best.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>It's great having parties with us.</span></li>
+                  </ul>
+                  <p>
+                    <b>Feel welcomed</b>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+            <div class="swiper-slide">
+              <div class="row gy-4 event-item">
+                <div class="col-lg-6">
+                  <img src="{% static 'assets/img/events-slider/events-slider-3.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                  <h3>Birthday Parties</h3>
+                  <div class="price">
+                    <p><span>$109</span></p>
+                  </div>
+                  <p class="fst-italic">
+                    Feel free to book for a space in our restaurant in case you want to celebrate your birthday party with your friends and loved ones. Our staff will offer the best services for you all                     
+                  </p>
+                  <ul>
+                    <li><i class="bi bi-check2-circle"></i> <span>Enjoy your day with our services.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>We love serving you feel free to request for anything.</span></li>
+                    <li><i class="bi bi-check2-circle"></i> <span>You are the main reason why we are here feel free to ask for anything from us.</span></li>
+                  </ul>
+                  <p>
+                    <b>Feel welcomed</b>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End Slider item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Events Section -->
+
+    <!-- Book A Table Section -->
+    <section id="book-a-table" class="book-a-table section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>RESERVATION</h2>
+        <p>Make your reservations with us earlier for a better service </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+<!-- forms/book-a-table.php -->
+
+        <form action="/reservation/" method="post" role="form" class="php-email-form">
+          {% csrf_token %}
+
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="number" class="form-control" name="phone" id="phone" placeholder="Your Phone" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="date" name="date" class="form-control" id="date" placeholder="Date" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="time" class="form-control" name="time" id="time" placeholder="Time" required="">
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <input type="number" class="form-control" name="people" id="people" placeholder="Number of people" required="">
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+
+          <div class="text-center mt-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
+            <button type="submit" class="btn btn-primary">RESERVE</button>
+            {% if messages %}
+
+            {% for message in messages %}
+  
+            <p>{{ message }}</p>
+  
+            {% endfor %}
+  
+            {% endif %}
+            </div>
+          </div>
+        </form><!-- End Reservation Form -->
+        
+
+      </div>
+
+    </section><!-- /Book A Table Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>OUR RESOURCES</h2>
+        <p>Enjoy cooking at home with our simple guide</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper" data-speed="600" data-delay="5000" data-breakpoints="{ &quot;320&quot;: { &quot;slidesPerView&quot;: 1, &quot;spaceBetween&quot;: 40 }, &quot;1200&quot;: { &quot;slidesPerView&quot;: 3, &quot;spaceBetween&quot;: 40 } }">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+                  <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{% static 'assets/img/50.png' %}" alt="" width="500" height="500">
+                </div>
+                <div class="col-md-6">
+                    <h1>RESOURCES</h1>
+                    <p>In this section, you'll discover downloadable PDF files filled with crucial information designed to enhance your understanding of our services. From detailed guides and procedures to useful templates and sample documents, we strive to equip you with valuable resources that simplify your needs. Whether you're a regular customer or just seeking general information about our offerings, our Resources section serves as your comprehensive source for all relevant details. Feel free to explore and download the materials as per your convenience.</p>
+                    <hr>
+                    <h2>Comprehensive Guide to Our Services</h2>
+                    <p>Download to explore more.</p>
+                    <a class="btn btn-primary" data-bs-toggle="tab" href="https://rclfoods.com/wp-content/uploads/2020/12/Recipe-Book-1-2.pdf">DOWNLOAD</a>
+
+                    <!-- <input type="button" class="btn btn-primary" value="DOWNLOAD"> -->
+    
+                </div>
+            </div>
+        </div>
+    </section><!-- /Testimonials Section -->
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Gallery</h2>
+        <p>Some photos from Our Restaurant</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-1.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-2.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-3.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-4.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-5.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-6.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-7.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="{% static 'assets/img/gallery/gallery-8.jpg' %}" class="glightbox" data-gallery="images-gallery">
+                <img src="{% static 'assets/img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div><!-- End Gallery Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Gallery Section -->
+   
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Contact Us</p>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+              <iframe style="border:0; width: 100%; height: 400px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div><!-- End Google Maps -->
+
+          </div>
+          
+          <div class="col-md-6" class="mt-5">
+
+            <p>For any assistance please feel free to reach us through <b>+254 976 830 208</b> or email us on <b>bytebistro@gmail.com</b> We trust our customers and we will always server them the best. Feel welcomed </p><br>
+           <b> <h2>+254 796 830 208</h2></b><br>
+           <b><h2>bytebistro@gmail.com</h2></b>
+
+                    <!-- </div>
+                  </div> -->
+        <!-- </div> -->
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Location</h3>
+                <p>Oginga Odinga Streets, 2087
+                </p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Open Hours</h3>
+                <p>Monday-Sunday:<br>09:00 AM - 07:30 PM</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 796 830 208</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>bytebistro@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+<!-- forms/contact.php -->
+          <div class="col-lg-8">
+            <form action="/message/" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <!-- <div class="loading">Loading</div> -->
+                  <!-- <div class="error-message"></div> -->
+                       <!-- <div class="sent-message">Your message has been sent. Thank you!</div>  -->
+
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+
+                  {% if messages %}
+
+              {% for message in messages %}
+
+              <p>{{ message }}</p>
+
+              {% endfor %}
+
+              {% endif %}
+
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Byte Bistro</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Oginga Odinga Streets</p>
+            <p>Kenya, 2087</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+254 796 830 208</span></p>
+            <p><strong>Email:</strong> <span>bytebistro@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://254 796 830 208"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://x.com/a_amaduo"><i class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/amaduo.adul.10/"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=W57_92pspko&pp=ygUbYmVzdCByZXN0YXVyYW50cyBpbiBuYWlyb2Jp"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/amaduo-adul-1b8794241/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3ByH6BYwMOSqShpIKVA4RQTQ%3D%3D"><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#specials">Specials</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+<!-- forms/newsletter.php -->
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Loyal Customers</h4>
+          <p>Subscribe to our restaurant channel and receive the latest news about us!</p>
+          <form action="/subscribe/" method="post" class="">
+            {% csrf_token %}
+            <div class="newsletter-form"><input type="email" name="email" required><input type="submit" value="Subscribe"></div>
+            {% if messages %}
+
+              {% for message in messages %}
+
+              <p>{{ message }}</p>
+
+              {% endfor %}
+
+              {% endif %}
+            <!-- <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div> -->
+          </form>
+        </div>  
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Byte Bistro</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://amaduoadul.com/">Adul Amaduo</a><br>
+        <b><p>Byte Bistro welcomes you back again!!</p></b>
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
